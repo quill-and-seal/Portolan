@@ -1,0 +1,148 @@
+/* Portolan — atelier du carnet.
+   Carnet par défaut : papier ligné, encre noire. Carnet de cartographe : parchemin, encre sépia. */
+
+.portolan {
+  --portolan-ink: #2b2420;
+  --portolan-paper: #fbf8f1;
+  --portolan-rule: rgba(70, 110, 150, 0.16);
+  --portolan-edge: #c9b28c;
+  --portolan-muted: #7a6a58;
+  --portolan-accent: #8e2f2a;
+}
+
+.portolan .window-content {
+  padding: 0;
+}
+
+.portolan-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.portolan-style-cartographe {
+  --portolan-ink: #4a3220;
+  --portolan-paper: #f3e6c8;
+  --portolan-rule: transparent;
+  --portolan-edge: #a8875a;
+}
+
+.portolan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border-light-tertiary, rgba(0, 0, 0, 0.15));
+}
+
+.portolan-header h2 {
+  margin: 0;
+  border: none;
+  font-size: 1.3em;
+}
+
+.portolan-header button {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.portolan-meta {
+  margin: 0;
+  color: var(--portolan-muted);
+  font-size: 0.9em;
+}
+
+.portolan-section {
+  margin: 12px 14px 0;
+  font-size: 1em;
+}
+
+.portolan-pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  padding: 14px;
+  overflow-y: auto;
+  align-content: start;
+}
+
+.portolan-pages.portolan-tucked {
+  flex: 0 0 auto;
+}
+
+.portolan-page {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portolan-page footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 24px;
+}
+
+.portolan-page footer button.icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.portolan-page-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+.portolan-paper {
+  margin: 0;
+  aspect-ratio: 1000 / 1400;
+  background-color: var(--portolan-paper);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 15px, var(--portolan-rule) 15px 16px);
+  border: 1px solid var(--portolan-edge);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.portolan-loose .portolan-paper {
+  transform: rotate(-1.5deg);
+}
+
+.portolan-paper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.portolan-paper .portolan-label {
+  fill: var(--portolan-ink);
+  font-family: var(--font-primary, serif);
+}
+
+.portolan-single {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+}
+
+.portolan-single .portolan-paper {
+  height: 100%;
+  max-width: 100%;
+}
+
+.portolan-empty {
+  grid-column: 1 / -1;
+  color: var(--portolan-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 24px 0;
+}

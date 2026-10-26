@@ -1,0 +1,48 @@
+{
+  "PORTOLAN": {
+    "Open": "Open notebook",
+    "Items": {
+      "Carnet": "Notebook",
+      "CarnetCartographe": "Cartographer's notebook",
+      "CarnetHint": "A {capacity}-page notebook to draw your own maps.",
+      "Papier": "Blank pages",
+      "PapierHint": "Stationer's pages, to replace the pages torn from a notebook."
+    },
+    "Carnet": {
+      "Counts": "{pages} maps · {blank} blank pages · capacity {capacity}",
+      "NewPage": "New map",
+      "Rename": "Rename map",
+      "NamePlaceholder": "Map name (region, town, dungeon…)",
+      "Confirm": "Confirm",
+      "Untitled": "Untitled map",
+      "Empty": "No maps yet. Start one on a blank page.",
+      "Tucked": "Loose sheets tucked in the notebook"
+    },
+    "Feuille": {
+      "Original": "Original",
+      "Copy": "Copy",
+      "By": "copied by {author}"
+    },
+    "Settings": {
+      "DefaultCapacity": {
+        "Name": "Default notebook pages",
+        "Hint": "Number of pages in a new notebook. Torn pages are replaced with stationer's pages, never beyond this number."
+      },
+      "CartographerCapacity": {
+        "Name": "Cartographer's notebook pages",
+        "Hint": "Number of pages in a new cartographer's notebook."
+      }
+    },
+    "Notifications": {
+      "GMCannotRead": "Players' maps are their own: the GM only sees them during a sale.",
+      "GMCannotEdit": "Portolan: the GM cannot edit players' maps.",
+      "SystemUnsupported": "Portolan only supports the dnd5e system for now."
+    },
+    "Errors": {
+      "BadCapacity": "A notebook's capacity must be a whole number of pages, at least 1.",
+      "NoBlankPage": "No blank page left in this notebook.",
+      "NoPage": "This page is no longer in the notebook.",
+      "NoSheet": "This sheet is no longer in the notebook."
+    }
+  }
+}

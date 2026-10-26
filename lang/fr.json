@@ -1,0 +1,48 @@
+{
+  "PORTOLAN": {
+    "Open": "Ouvrir le carnet",
+    "Items": {
+      "Carnet": "Carnet",
+      "CarnetCartographe": "Carnet de cartographe",
+      "CarnetHint": "Un carnet de {capacity} pages pour dessiner ses propres cartes.",
+      "Papier": "Pages vierges",
+      "PapierHint": "Pages de papeterie, pour remplacer les pages arrachées d'un carnet."
+    },
+    "Carnet": {
+      "Counts": "{pages} cartes · {blank} pages vierges · capacité {capacity}",
+      "NewPage": "Nouvelle carte",
+      "Rename": "Renommer la carte",
+      "NamePlaceholder": "Nom de la carte (région, ville, donjon…)",
+      "Confirm": "Valider",
+      "Untitled": "Carte sans nom",
+      "Empty": "Aucune carte pour l'instant. Commence-en une sur une page vierge.",
+      "Tucked": "Feuilles glissées dans le carnet"
+    },
+    "Feuille": {
+      "Original": "Original",
+      "Copy": "Copie",
+      "By": "copiée par {author}"
+    },
+    "Settings": {
+      "DefaultCapacity": {
+        "Name": "Pages du carnet par défaut",
+        "Hint": "Nombre de pages d'un carnet neuf. Les pages arrachées se remplacent avec des pages de papeterie, sans dépasser ce nombre."
+      },
+      "CartographerCapacity": {
+        "Name": "Pages du carnet de cartographe",
+        "Hint": "Nombre de pages d'un carnet de cartographe neuf."
+      }
+    },
+    "Notifications": {
+      "GMCannotRead": "Les cartes des joueurs restent les leurs : le MJ ne les voit que lors d'une vente.",
+      "GMCannotEdit": "Portolan : le MJ ne peut pas modifier les cartes des joueurs.",
+      "SystemUnsupported": "Portolan ne prend en charge que le système dnd5e pour l'instant."
+    },
+    "Errors": {
+      "BadCapacity": "La capacité d'un carnet doit être un nombre entier de pages, au moins 1.",
+      "NoBlankPage": "Plus de page vierge dans ce carnet.",
+      "NoPage": "Cette page n'existe plus dans le carnet.",
+      "NoSheet": "Cette feuille n'est plus dans le carnet."
+    }
+  }
+}

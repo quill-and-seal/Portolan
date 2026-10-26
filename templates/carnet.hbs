@@ -1,0 +1,55 @@
+<section class="portolan-sheet portolan-style-{{style}}">
+  {{#if feuille}}
+    <header class="portolan-header">
+      <h2>{{#if feuille.name}}{{feuille.name}}{{else}}{{localize "PORTOLAN.Carnet.Untitled"}}{{/if}}</h2>
+      <p class="portolan-meta">
+        {{#if feuille.original}}{{localize "PORTOLAN.Feuille.Original"}}{{else}}{{localize "PORTOLAN.Feuille.Copy"}}{{/if}}
+        {{#if feuille.author}} · {{localize "PORTOLAN.Feuille.By" author=feuille.author}}{{/if}}
+      </p>
+    </header>
+    <div class="portolan-single">
+      <figure class="portolan-paper">{{{feuille.svg}}}</figure>
+    </div>
+  {{else}}
+    <header class="portolan-header">
+      <p class="portolan-meta">
+        {{localize "PORTOLAN.Carnet.Counts" pages=pages.length blank=blank capacity=capacity}}
+      </p>
+      {{#if canEdit}}
+        <button type="button" data-action="newPage" {{#unless canStart}}disabled{{/unless}}>
+          <i class="fa-solid fa-feather-pointed"></i> {{localize "PORTOLAN.Carnet.NewPage"}}
+        </button>
+      {{/if}}
+    </header>
+
+    <div class="portolan-pages">
+      {{#each pages}}
+        <article class="portolan-page" data-page-id="{{id}}">
+          <figure class="portolan-paper">{{{svg}}}</figure>
+          <footer>
+            <span class="portolan-page-name">{{#if name}}{{name}}{{else}}{{localize "PORTOLAN.Carnet.Untitled"}}{{/if}}</span>
+            {{#if @root.canEdit}}
+              <button type="button" class="icon" data-action="renamePage" data-tooltip="PORTOLAN.Carnet.Rename">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            {{/if}}
+          </footer>
+        </article>
+      {{else}}
+        <p class="portolan-empty">{{localize "PORTOLAN.Carnet.Empty"}}</p>
+      {{/each}}
+    </div>
+
+    {{#if tucked.length}}
+      <h3 class="portolan-section">{{localize "PORTOLAN.Carnet.Tucked"}}</h3>
+      <div class="portolan-pages portolan-tucked">
+        {{#each tucked}}
+          <article class="portolan-page portolan-loose" data-feuille-id="{{id}}">
+            <figure class="portolan-paper">{{{svg}}}</figure>
+            <footer><span class="portolan-page-name">{{#if name}}{{name}}{{else}}{{localize "PORTOLAN.Carnet.Untitled"}}{{/if}}</span></footer>
+          </article>
+        {{/each}}
+      </div>
+    {{/if}}
+  {{/if}}
+</section>
